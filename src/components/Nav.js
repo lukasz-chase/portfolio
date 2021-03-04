@@ -1,90 +1,196 @@
 import React, { useState } from "react";
+//react router
+import { Link } from "react-router-dom";
 //styling
 import styled from "styled-components";
-//animation
-import { motion } from "framer-motion";
+//components
+import Dropdown from "./Dropdown";
+import ToggleDropdown from "./ToggleDropdown";
 
 const Nav = () => {
   //state
   const [dropdown, setDropdown] = useState(false);
+  const [toggle, setToggle] = useState(false);
+  const [menu, setMenu] = useState(false);
+  //handlers
+  const dropdownHandler = () =>
+    window.innerWidth < 960 ? setDropdown(false) : setDropdown(true);
+  const toggleDropdown = () =>
+    window.innerWidth < 960 ? setToggle(!toggle) : setToggle(false);
   return (
     <NavComponent>
       <div className="nav-logo">Portfolio</div>
-      <div className="nav-links">
-        <ul>
-          <li>About me</li>
-          <li className="nav-dropdown">
-            <div
-              className="dropdown-header"
-              onMouseEnter={() => setDropdown(true)}
-              onMouseLeave={() => setDropdown(false)}
-            >
-              Projects
-            </div>
-            <div
-              className="dropdown-body"
-              style={{ display: dropdown ? "flex" : "none" }}
-              onMouseEnter={() => setDropdown(true)}
-              onMouseLeave={() => setDropdown(false)}
-            >
-              <ul>
-                <li>Sacharoza</li>
-                <li>Hepar</li>
-                <li>Parsec</li>
-                <li>Benzen</li>
-              </ul>
-            </div>
-          </li>
-          <li>Contact</li>
-        </ul>
+      <div className="menu-icon" onClick={() => setMenu(!menu)}>
+        <i className={menu ? "fas fa-times" : "fas fa-bars"} />
       </div>
+      <ul className={menu ? "nav-menu active" : "nav-menu"}>
+        <li className="nav-item">
+          <Link
+            to="/about-me"
+            className="nav-links"
+            onClick={() => setMenu(false)}
+          >
+            About me
+          </Link>
+        </li>
+        <li
+          className="nav-item dropdown"
+          onMouseEnter={dropdownHandler}
+          onMouseLeave={() => setDropdown(false)}
+          onClick={() => toggleDropdown()}
+        >
+          <span className="dropdown-header">
+            Projects <i className="fas fa-caret-down" />
+          </span>
+          {dropdown && <Dropdown />}
+        </li>
+        {toggle && (
+          <ToggleDropdown
+            toggle={toggle}
+            setMenu={setMenu}
+            setToggle={setToggle}
+          />
+        )}
+        <li className="nav-item">
+          <Link
+            to="/contact"
+            className="nav-links"
+            onClick={() => setMenu(false)}
+          >
+            Contact
+          </Link>
+        </li>
+      </ul>
     </NavComponent>
   );
 };
 
-const NavComponent = styled(motion.div)`
+const NavComponent = styled.div`
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  text-transform: upperCase;
-  padding: 1rem;
-  background: #8360c3;
-  background: -webkit-linear-gradient(to right, #8360c3, #2ebf91);
-  background: linear-gradient(to right, #8360c3, #2ebf91);
+  font-size: 1.2rem;
   .nav-logo {
-    letter-spacing: 4px;
-    padding: 0rem 1rem;
-    align-self: flex-start;
+    color: #fff;
+    justify-self: start;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 2rem;
+    @media screen and (max-width: 960px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(25%, 50%);
+    }
   }
-  .nav-links {
-    ul {
+  .fa-firstdraft {
+    margin-left: 0.5rem;
+    font-size: 1.6rem;
+  }
+  .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+    @media screen and (max-width: 960px) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 90vh;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+    .nav-item {
       display: flex;
       align-items: center;
-      list-style: none;
-      padding: 0rem 1rem;
-      margin: 0;
-      li {
-        align-self: flex-start;
-        text-align: center;
-        width: 8rem;
-      }
-      .nav-dropdown {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        .dropdown-header {
+      height: 80px;
+      .nav-links,
+      .dropdown-header {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        &:hover {
+          background-color: rgb(67, 185, 209);
+          border-radius: 4px;
+          transition: all 0.2s ease-out;
         }
-        .dropdown-body {
-          ul {
-            display: flex;
-            flex-direction: column;
-            li {
-              padding: 1rem;
-            }
+        @media screen and (max-width: 960px) {
+          text-align: center;
+          padding: 2rem;
+          width: 100%;
+          display: table;
+          &:hover {
+            border-radius: 0;
           }
         }
       }
+    }
+  }
+  .nav-links-mobile {
+    display: none;
+  }
+  .menu-icon {
+    display: none;
+    @media screen and (max-width: 960px) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+    .fa-bars {
+      color: #fff;
+    }
+  }
+  .nav-menu.active {
+    @media screen and (max-width: 960px) {
+      background: #242222;
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+    }
+  }
+
+  .nav-links-mobile {
+    @media screen and (max-width: 960px) {
+      display: block;
+      text-align: center;
+      padding: 1.5rem;
+      margin: 2rem auto;
+      border-radius: 4px;
+      width: 80%;
+      background: #1888ff;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5rem;
+      &:hover {
+        background: #fff;
+        color: #1888ff;
+        transition: 250ms;
+      }
+    }
+  }
+  .NavbarItems {
+    @media screen and (max-width: 960px) {
+      position: relative;
+    }
+  }
+  .fa-times {
+    @media screen and (max-width: 960px) {
+      color: #fff;
+      font-size: 2rem;
     }
   }
 `;
