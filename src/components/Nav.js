@@ -19,7 +19,7 @@ const Nav = () => {
     window.innerWidth < 960 ? setToggle(!toggle) : setToggle(false);
   return (
     <NavComponent>
-      <div className="nav-logo">Portfolio</div>
+      <div className="nav-logo">Łukasz Ścigaj</div>
       <div className="menu-icon" onClick={() => setMenu(!menu)}>
         <i className={menu ? "fas fa-times" : "fas fa-bars"} />
       </div>
@@ -66,6 +66,8 @@ const Nav = () => {
 };
 
 const NavComponent = styled.div`
+  position: fixed;
+  width: 100%;
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   height: 80px;
   display: flex;
