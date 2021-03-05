@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 //image
 import twarz from "../images/twarz.JPG";
+import Line from "./Line";
 
 const AboutMe = () => {
   return (
@@ -20,7 +21,8 @@ const AboutMe = () => {
             currently in second semester.{" "}
           </span>
         </div>
-        <div className="line"></div>
+
+        <Line />
         <div className="technologies">
           <span>Im currently developing in technologies:</span>
           <ul>
@@ -86,12 +88,6 @@ const AboutMeComponent = styled(motion.div)`
           color: rgb(37, 136, 156);
         }
       }
-    }
-    .line {
-      width: 90%;
-      height: 0.2rem;
-      background-color: black;
-      margin: 1rem;
     }
     .technologies {
       width: 90%;
