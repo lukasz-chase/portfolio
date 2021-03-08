@@ -7,7 +7,7 @@ import Line from "./Line";
 
 const Contact = () => {
   return (
-    <ContactComponent>
+    <ContactComponent id="contact">
       <div className="header">Contact</div>
 
       <div className="contact-info">

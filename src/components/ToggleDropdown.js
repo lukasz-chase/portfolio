@@ -4,7 +4,7 @@ import styled from "styled-components";
 //components
 import { MenuItems } from "./MenuItems";
 //react router
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const ToggleDropdown = ({ toggle, setMenu }) => {
   return (

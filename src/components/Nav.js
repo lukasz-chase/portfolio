@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 //react router
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 //styling
 import styled from "styled-components";
 //components
@@ -26,7 +26,7 @@ const Nav = () => {
       <ul className={menu ? "nav-menu active" : "nav-menu"}>
         <li className="nav-item">
           <Link
-            to="/about-me"
+            to="about-me"
             className="nav-links"
             onClick={() => setMenu(false)}
           >
@@ -53,7 +53,7 @@ const Nav = () => {
         )}
         <li className="nav-item">
           <Link
-            to="/contact"
+            to="contact"
             className="nav-links"
             onClick={() => setMenu(false)}
           >
