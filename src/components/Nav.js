@@ -20,7 +20,18 @@ const Nav = () => {
   return (
     <NavComponent>
       <div className="nav-logo">
-        <span>Łukasz Ścigaj</span>
+        <span>
+          <Link
+            to="about-me"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}
+            className="nav-link"
+          >
+            Łukasz Ścigaj
+          </Link>
+        </span>
       </div>
       <div className="menu-icon" onClick={() => setMenu(!menu)}>
         <i className={menu ? "fas fa-times" : "fas fa-bars"} />
