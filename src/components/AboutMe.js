@@ -105,8 +105,8 @@ const AboutMeComponent = styled(motion.div)`
       border: 1px solid black;
       object-fit: cover;
       @media screen and (max-width: 960px) {
-        height: 17rem;
-        width: 12rem;
+        height: 14rem;
+        width: 11rem;
       }
     }
   }
