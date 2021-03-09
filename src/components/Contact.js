@@ -10,7 +10,6 @@ const Contact = () => {
   return (
     <ContactComponent id="contact">
       <div className="header">Contact</div>
-
       <div className="contact-info">
         <div className="contact">
           <a

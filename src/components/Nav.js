@@ -84,6 +84,7 @@ const NavComponent = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  z-index: 10;
   @media screen and (max-width: 960px) {
     justify-content: space-between;
   }
@@ -102,10 +103,6 @@ const NavComponent = styled.div`
     display: none;
     @media screen and (max-width: 960px) {
       display: block;
-      /* position: absolute; */
-      /* top: 0;
-      right: 0;
-      transform: translate(-100%, 60%); */
       font-size: 1rem;
       cursor: pointer;
     }

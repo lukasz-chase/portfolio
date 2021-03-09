@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 //animation
 import { motion } from "framer-motion";
+import { technologiesAnimation } from "../animation.js";
 //image
 import twarz from "../images/twarz.JPG";
 import Line from "./Line";
@@ -11,12 +12,15 @@ import { FaReact } from "react-icons/fa";
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { SiStyledComponents, SiRedux, SiMaterialUi } from "react-icons/si";
 import { DiJavascript1, DiCss3, DiSass } from "react-icons/di";
+//components
+import Wave from "./Wave";
 
 const AboutMe = () => {
   return (
     <AboutMeComponent id="about-me">
       <div className="image">
         <img src={twarz} alt="" />
+        <Wave />
       </div>
       <div className="info">
         <div className="personal-info">
@@ -28,7 +32,12 @@ const AboutMe = () => {
         </div>
 
         <Line />
-        <div className="technologies">
+        <motion.div
+          className="technologies"
+          variants={technologiesAnimation}
+          initial="hidden"
+          animate="show"
+        >
           <span>Im currently developing in technologies:</span>
           <ul>
             <li>
@@ -66,7 +75,7 @@ const AboutMe = () => {
               <AiFillGithub className="icon" /> git
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </AboutMeComponent>
   );
@@ -90,6 +99,7 @@ const AboutMeComponent = styled(motion.div)`
       width: 100%;
     }
     img {
+      z-index: 2;
       height: 35rem;
       width: 25rem;
       border: 1px solid black;
@@ -101,6 +111,7 @@ const AboutMeComponent = styled(motion.div)`
     }
   }
   .info {
+    z-index: 2;
     flex: 1;
     display: flex;
     flex-direction: column;
