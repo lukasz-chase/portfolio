@@ -1,7 +1,7 @@
 export const imageAnimation = {
   hidden: {
     opacity: 0,
-    x: -300,
+    x: -100,
   },
   show: {
     opacity: 1,
@@ -12,7 +12,7 @@ export const imageAnimation = {
   },
   exit: {
     opacity: 0,
-    x: -600,
+    x: -300,
     transition: {
       duration: 0.1,
       ease: "easeOut",
