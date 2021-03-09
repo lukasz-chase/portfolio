@@ -42,7 +42,7 @@ const Home = () => {
         img={parsec}
         info={"Rick and Morty database"}
         id="parsec"
-        name="hepar"
+        name="parsec"
         technologies={"react, styled-components and material ui"}
         gitLink={"https://github.com/luki752/parsec"}
         liveLink={"https://parsec.vercel.app/"}
