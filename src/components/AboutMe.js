@@ -130,6 +130,10 @@ const AboutMeComponent = styled(motion.div)`
       width: 90%;
       @media screen and (max-width: 960px) {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
       ul {
         list-style: none;
@@ -144,11 +148,20 @@ const AboutMeComponent = styled(motion.div)`
           border-radius: 1rem;
           background-color: white;
           transition: 0.3s ease-in all;
+          @media screen and (max-width: 960px) {
+            padding: 0.5rem;
+            flex-direction: column;
+            text-align: center;
+          }
           &:hover {
             background-color: rgb(67, 185, 209);
           }
           .icon {
             margin-right: 0.5rem;
+            @media screen and (max-width: 960px) {
+              margin: 0;
+              font-size: 1.5rem;
+            }
           }
         }
       }

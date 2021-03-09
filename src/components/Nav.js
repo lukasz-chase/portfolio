@@ -25,7 +25,7 @@ const Nav = () => {
       <div className="menu-icon" onClick={() => setMenu(!menu)}>
         <i className={menu ? "fas fa-times" : "fas fa-bars"} />
       </div>
-      {/* <ul className={menu ? "nav-menu active" : "nav-menu"}>
+      <ul className={menu ? "nav-menu active" : "nav-menu"}>
         <li className="nav-item">
           <Link
             to="about-me"
@@ -70,7 +70,7 @@ const Nav = () => {
             Contact
           </Link>
         </li>
-      </ul> */}
+      </ul>
     </NavComponent>
   );
 };
@@ -78,13 +78,16 @@ const Nav = () => {
 const NavComponent = styled.div`
   position: fixed;
   height: 80px;
-  width:100%;
+  width: 100%;
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  @media screen and (max-width: 960px) {
+    justify-content: space-between;
   }
+
   .nav-logo {
     color: #fff;
     justify-self: start;
@@ -92,11 +95,7 @@ const NavComponent = styled.div`
     text-decoration: none;
     font-size: 2rem;
     @media screen and (max-width: 960px) {
-      /* position: absolute;
-      top: 0;
-      left: 0;
-      transform: translate(25%, 50%); */
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
   }
   .menu-icon {
@@ -114,15 +113,16 @@ const NavComponent = styled.div`
       color: #fff;
     }
   }
-  .fa-bars,.fa-times {
-    margin-left: 0.5rem;
+  .fa-bars,
+  .fa-times {
+    margin-right: 20px;
     font-size: 1.6rem;
     @media screen and (max-width: 960px) {
       color: #fff;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
-  /* .nav-menu {
+  .nav-menu {
     display: grid;
     grid-template-columns: repeat(5, auto);
     grid-gap: 10px;
@@ -168,12 +168,12 @@ const NavComponent = styled.div`
         }
       }
     }
-  } */
+  }
   .nav-links-mobile {
     display: none;
   }
 
-  /* .nav-menu.active {
+  .nav-menu.active {
     @media screen and (max-width: 960px) {
       background: #242222;
       left: 0;
@@ -181,9 +181,9 @@ const NavComponent = styled.div`
       transition: all 0.5s ease;
       z-index: 1;
     }
-  } */
+  }
 
-  /* .nav-links-mobile {
+  .nav-links-mobile {
     @media screen and (max-width: 960px) {
       display: block;
       text-align: center;
@@ -201,12 +201,12 @@ const NavComponent = styled.div`
         transition: 250ms;
       }
     }
-  } */
-  /* .NavbarItems {
+  }
+  .NavbarItems {
     @media screen and (max-width: 960px) {
       position: relative;
     }
-  } */
+  }
 `;
 
 export default Nav;

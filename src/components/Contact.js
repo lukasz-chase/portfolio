@@ -81,6 +81,7 @@ const ContactComponent = styled(motion.div)`
       @media screen and (max-width: 1000px) {
         margin: 0.5rem 0rem;
         width: 100%;
+        font-size: 0.6rem;
       }
       a {
         text-align: center;
