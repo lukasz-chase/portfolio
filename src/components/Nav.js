@@ -19,16 +19,22 @@ const Nav = () => {
     window.innerWidth < 960 ? setToggle(!toggle) : setToggle(false);
   return (
     <NavComponent>
-      <div className="nav-logo">Łukasz Ścigaj</div>
+      <div className="nav-logo">
+        <span>Łukasz Ścigaj</span>
+      </div>
       <div className="menu-icon" onClick={() => setMenu(!menu)}>
         <i className={menu ? "fas fa-times" : "fas fa-bars"} />
       </div>
-      <ul className={menu ? "nav-menu active" : "nav-menu"}>
+      {/* <ul className={menu ? "nav-menu active" : "nav-menu"}>
         <li className="nav-item">
           <Link
             to="about-me"
-            className="nav-links"
-            onClick={() => setMenu(false)}
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}
+            className="nav-link"
+            onClick={() => setMenu(!menu)}
           >
             About me
           </Link>
@@ -54,26 +60,31 @@ const Nav = () => {
         <li className="nav-item">
           <Link
             to="contact"
-            className="nav-links"
-            onClick={() => setMenu(false)}
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}
+            className="nav-link"
+            onClick={() => setMenu(!menu)}
           >
             Contact
           </Link>
         </li>
-      </ul>
+      </ul> */}
     </NavComponent>
   );
 };
 
 const NavComponent = styled.div`
   position: fixed;
-  width: 100%;
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   height: 80px;
+  width:100%;
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  }
   .nav-logo {
     color: #fff;
     justify-self: start;
@@ -81,17 +92,37 @@ const NavComponent = styled.div`
     text-decoration: none;
     font-size: 2rem;
     @media screen and (max-width: 960px) {
-      position: absolute;
+      /* position: absolute;
       top: 0;
       left: 0;
-      transform: translate(25%, 50%);
+      transform: translate(25%, 50%); */
+      font-size: 1rem;
     }
   }
-  .fa-firstdraft {
+  .menu-icon {
+    display: none;
+    @media screen and (max-width: 960px) {
+      display: block;
+      /* position: absolute; */
+      /* top: 0;
+      right: 0;
+      transform: translate(-100%, 60%); */
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .fa-bars {
+      color: #fff;
+    }
+  }
+  .fa-bars,.fa-times {
     margin-left: 0.5rem;
     font-size: 1.6rem;
+    @media screen and (max-width: 960px) {
+      color: #fff;
+      font-size: 2rem;
+    }
   }
-  .nav-menu {
+  /* .nav-menu {
     display: grid;
     grid-template-columns: repeat(5, auto);
     grid-gap: 10px;
@@ -104,9 +135,9 @@ const NavComponent = styled.div`
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 90vh;
+      height: 110vh;
       position: absolute;
-      top: 80px;
+      top: 78px;
       left: -100%;
       opacity: 1;
       transition: all 0.5s ease;
@@ -115,7 +146,7 @@ const NavComponent = styled.div`
       display: flex;
       align-items: center;
       height: 80px;
-      .nav-links,
+      .nav-link,
       .dropdown-header {
         color: white;
         text-decoration: none;
@@ -124,6 +155,7 @@ const NavComponent = styled.div`
           background-color: rgb(67, 185, 209);
           border-radius: 4px;
           transition: all 0.2s ease-out;
+          cursor: pointer;
         }
         @media screen and (max-width: 960px) {
           text-align: center;
@@ -136,26 +168,12 @@ const NavComponent = styled.div`
         }
       }
     }
-  }
+  } */
   .nav-links-mobile {
     display: none;
   }
-  .menu-icon {
-    display: none;
-    @media screen and (max-width: 960px) {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(-100%, 60%);
-      font-size: 1.8rem;
-      cursor: pointer;
-    }
-    .fa-bars {
-      color: #fff;
-    }
-  }
-  .nav-menu.active {
+
+  /* .nav-menu.active {
     @media screen and (max-width: 960px) {
       background: #242222;
       left: 0;
@@ -163,9 +181,9 @@ const NavComponent = styled.div`
       transition: all 0.5s ease;
       z-index: 1;
     }
-  }
+  } */
 
-  .nav-links-mobile {
+  /* .nav-links-mobile {
     @media screen and (max-width: 960px) {
       display: block;
       text-align: center;
@@ -183,17 +201,12 @@ const NavComponent = styled.div`
         transition: 250ms;
       }
     }
-  }
-  .NavbarItems {
+  } */
+  /* .NavbarItems {
     @media screen and (max-width: 960px) {
       position: relative;
     }
-  }
-  .fa-times {
-    @media screen and (max-width: 960px) {
-      color: #fff;
-      font-size: 2rem;
-    }
-  }
+  } */
 `;
+
 export default Nav;

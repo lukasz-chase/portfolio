@@ -10,7 +10,6 @@ const Home = () => {
   return (
     <HomeComponent>
       <AboutMe />
-      <Project />
       <Contact />
     </HomeComponent>
   );

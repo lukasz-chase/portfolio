@@ -6,7 +6,11 @@ import { MenuItems } from "./MenuItems";
 //react router
 import { Link } from "react-scroll";
 
-const ToggleDropdown = ({ toggle, setMenu }) => {
+const ToggleDropdown = ({ toggle, setToggle, setMenu }) => {
+  const clickHandler = () => {
+    setMenu(false);
+    setToggle(false);
+  };
   return (
     <ToggleDropdownComponent className={toggle ? "active" : ""}>
       <ul>
@@ -15,7 +19,7 @@ const ToggleDropdown = ({ toggle, setMenu }) => {
             <Link
               className={item.cName}
               to={item.path}
-              onClick={() => setMenu(false)}
+              onClick={() => clickHandler()}
             >
               {item.title}
             </Link>

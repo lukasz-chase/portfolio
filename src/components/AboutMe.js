@@ -6,10 +6,15 @@ import { motion } from "framer-motion";
 //image
 import twarz from "../images/twarz.JPG";
 import Line from "./Line";
+//icons
+import { FaReact } from "react-icons/fa";
+import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
+import { SiStyledComponents, SiRedux, SiMaterialUi } from "react-icons/si";
+import { DiJavascript1, DiCss3, DiSass } from "react-icons/di";
 
 const AboutMe = () => {
   return (
-    <AboutMeComponent>
+    <AboutMeComponent id="about-me">
       <div className="image">
         <img src={twarz} alt="" />
       </div>
@@ -26,15 +31,40 @@ const AboutMe = () => {
         <div className="technologies">
           <span>Im currently developing in technologies:</span>
           <ul>
-            <li>HTML</li>
-            <li>Java Script</li>
-            <li>CSS</li>
-            <li>Styled Components</li>
-            <li>SCSS</li>
-            <li>React</li>
-            <li>Redux</li>
-            <li>Material ui</li>
-            <li>git</li>
+            <li>
+              <AiFillHtml5 className="icon" />
+              HTML
+            </li>
+            <li>
+              <DiCss3 className="icon" />
+              CSS
+            </li>
+            <li>
+              <SiStyledComponents className="icon" />
+              Styled Components
+            </li>
+            <li>
+              <DiSass className="icon" />
+              SASS
+            </li>
+            <li>
+              <DiJavascript1 className="icon" />
+              Java Script
+            </li>
+            <li>
+              <FaReact className="icon" />
+              React
+            </li>
+            <li>
+              <SiRedux className="icon" />
+              Redux
+            </li>
+            <li>
+              <SiMaterialUi className="icon" /> Material ui
+            </li>
+            <li>
+              <AiFillGithub className="icon" /> git
+            </li>
           </ul>
         </div>
       </div>
@@ -49,6 +79,7 @@ const AboutMeComponent = styled(motion.div)`
   padding-top: 5rem;
   @media screen and (max-width: 960px) {
     flex-direction: column;
+    width: 100%;
   }
   .image {
     flex: 1;
@@ -56,7 +87,7 @@ const AboutMeComponent = styled(motion.div)`
     justify-content: center;
     align-items: center;
     @media screen and (max-width: 960px) {
-      margin: 1rem;
+      width: 100%;
     }
     img {
       height: 35rem;
@@ -80,9 +111,15 @@ const AboutMeComponent = styled(motion.div)`
       font-size: 1rem;
       justify-content: flex-start;
       align-items: center;
+      width: 100%;
     }
     .personal-info {
       width: 80%;
+      @media screen and (max-width: 960px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       span {
         b {
           color: rgb(37, 136, 156);
@@ -91,11 +128,17 @@ const AboutMeComponent = styled(motion.div)`
     }
     .technologies {
       width: 90%;
+      @media screen and (max-width: 960px) {
+        width: 100%;
+      }
       ul {
         list-style: none;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: auto auto auto;
         li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           padding: 1rem;
           margin: 0.5rem;
           border-radius: 1rem;
@@ -103,6 +146,9 @@ const AboutMeComponent = styled(motion.div)`
           transition: 0.3s ease-in all;
           &:hover {
             background-color: rgb(67, 185, 209);
+          }
+          .icon {
+            margin-right: 0.5rem;
           }
         }
       }

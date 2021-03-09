@@ -3,7 +3,8 @@ import React from "react";
 import styled from "styled-components";
 //animation
 import { motion } from "framer-motion";
-import Line from "./Line";
+//icons
+import { AiFillGithub, AiFillFacebook, AiOutlineMail } from "react-icons/ai";
 
 const Contact = () => {
   return (
@@ -17,6 +18,7 @@ const Contact = () => {
             target="_blank"
             rel="noreferrer"
           >
+            <AiOutlineMail className="icon" />
             <h1>Send me an email: lukasz.scigaj00@gmail.com</h1>
           </a>
         </div>
@@ -26,22 +28,23 @@ const Contact = () => {
             target="_blank"
             rel="noreferrer"
           >
+            <AiFillFacebook className="icon" />
             <h1>Message me on Facebook</h1>
           </a>
         </div>
         <div className="contact">
           <a href="https://github.com/luki752" target="_blank" rel="noreferrer">
+            <AiFillGithub className="icon" />
             <h1>Look through my github</h1>
           </a>
         </div>
       </div>
-      <Line />
     </ContactComponent>
   );
 };
 
 const ContactComponent = styled(motion.div)`
-  min-height: 90vh;
+  min-height: 100vh;
   background-color: #dcd9d4;
   background-image: linear-gradient(
       to bottom,
@@ -65,12 +68,20 @@ const ContactComponent = styled(motion.div)`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+      width: 100%;
+    }
     .contact {
       display: flex;
       align-items: center;
       justify-content: center;
       flex: 1;
       font-size: 0.8rem;
+      @media screen and (max-width: 1000px) {
+        margin: 0.5rem 0rem;
+        width: 100%;
+      }
       a {
         text-align: center;
         color: black;
@@ -79,8 +90,14 @@ const ContactComponent = styled(motion.div)`
         border-radius: 1rem;
         padding: 1rem;
         transition: 0.3s ease-in all;
+        @media screen and (max-width: 1000px) {
+          width: 100%;
+        }
         &:hover {
           background-color: rgb(67, 185, 209);
+        }
+        .icon {
+          font-size: 2rem;
         }
       }
     }
