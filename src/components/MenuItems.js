@@ -1,22 +1,22 @@
 export const MenuItems = [
   {
     title: "sacharoza",
-    path: "/sacharoza",
+    path: "sacharoza",
     cName: "dropdown-link",
   },
   {
     title: "hepar",
-    path: "/hepar",
+    path: "hepar",
     cName: "dropdown-link",
   },
   {
     title: "parsec",
-    path: "/parsec",
+    path: "parsec",
     cName: "dropdown-link",
   },
   {
     title: "benzen",
-    path: "/benzen",
+    path: "benzen",
     cName: "dropdown-link",
   },
 ];

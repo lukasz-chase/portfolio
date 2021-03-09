@@ -19,6 +19,10 @@ const ToggleDropdown = ({ toggle, setToggle, setMenu }) => {
             <Link
               className={item.cName}
               to={item.path}
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-80}
               onClick={() => clickHandler()}
             >
               {item.title}

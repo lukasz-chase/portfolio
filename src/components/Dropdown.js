@@ -12,7 +12,14 @@ const Dropdown = () => {
       <ul>
         {MenuItems.map((item, index) => (
           <li key={index}>
-            <Link className={item.cName} to={item.path}>
+            <Link
+              className={item.cName}
+              to={item.path}
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-80}
+            >
               {item.title}
             </Link>
           </li>
