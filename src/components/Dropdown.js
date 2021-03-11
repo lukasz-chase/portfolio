@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 //components
 import { MenuItems } from "./MenuItems";
-//react router
+//react scroll
 import { Link } from "react-scroll";
 
 const Dropdown = () => {

@@ -6,13 +6,13 @@ import { MenuItems } from "./MenuItems";
 //react router
 import { Link } from "react-scroll";
 
-const ToggleDropdown = ({ toggle, setToggle, setMenu }) => {
+const MobileDropdown = ({ toggle, setToggle, setMenu }) => {
   const clickHandler = () => {
     setMenu(false);
     setToggle(false);
   };
   return (
-    <ToggleDropdownComponent className={toggle ? "active" : ""}>
+    <MobileDropdownComponent className={toggle ? "active" : ""}>
       <ul>
         {MenuItems.map((item, index) => (
           <li key={index}>
@@ -30,11 +30,11 @@ const ToggleDropdown = ({ toggle, setToggle, setMenu }) => {
           </li>
         ))}
       </ul>
-    </ToggleDropdownComponent>
+    </MobileDropdownComponent>
   );
 };
 
-const ToggleDropdownComponent = styled.div`
+const MobileDropdownComponent = styled.div`
   .active {
     display: block;
   }
@@ -67,4 +67,4 @@ const ToggleDropdownComponent = styled.div`
   }
 `;
 
-export default ToggleDropdown;
+export default MobileDropdown;

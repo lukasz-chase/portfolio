@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import styled from "styled-components";
 //components
 import Dropdown from "./Dropdown";
-import ToggleDropdown from "./ToggleDropdown";
+import MobileDropdown from "./MobileDropdown";
 
 const Nav = () => {
   //state
@@ -62,7 +62,7 @@ const Nav = () => {
           {dropdown && <Dropdown />}
         </li>
         {toggle && (
-          <ToggleDropdown
+          <MobileDropdown
             toggle={toggle}
             setMenu={setMenu}
             setToggle={setToggle}
