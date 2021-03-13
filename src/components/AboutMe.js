@@ -95,11 +95,18 @@ const AboutMeComponent = styled.div`
     .education {
       display: flex;
       flex-direction: column;
+      padding: 0rem 2rem;
       span {
         font-size: 1.5rem;
+        @media screen and (max-width: 960px) {
+          font-size: 1rem;
+        }
       }
       p {
         font-size: 1rem;
+        @media screen and (max-width: 960px) {
+          font-size: 0.6rem;
+        }
       }
     }
   }
