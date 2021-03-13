@@ -1,8 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
 //styling
 import styled from "styled-components";
-//animation
-import { motion } from "framer-motion";
 //icons
 import { FaReact } from "react-icons/fa";
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
@@ -15,57 +13,55 @@ import {
 import { DiJavascript1, DiCss3, DiSass } from "react-icons/di";
 
 const Technologies = () => {
-  const constraintsRef = useRef(null);
   return (
-    <TechnologiesComponent id="technologies" ref={constraintsRef}>
+    <TechnologiesComponent id="technologies">
       <span>My current tech stack includes:</span>
-      <p>Drag them and have fun!</p>
       <ul>
-        <motion.li drag dragConstraints={constraintsRef}>
+        <li>
           <AiFillHtml5 className="icon" />
           HTML
-        </motion.li>
-        <motion.li drag dragConstraints={constraintsRef}>
+        </li>
+        <li>
           <DiCss3 className="icon" />
           CSS
-        </motion.li>
-        <motion.li drag dragConstraints={constraintsRef}>
+        </li>
+        <li>
           <SiStyledComponents className="icon" />
           Styled Components
-        </motion.li>
-        <motion.li drag dragConstraints={constraintsRef}>
+        </li>
+        <li>
           <DiSass className="icon" />
           SASS
-        </motion.li>
-        <motion.li drag dragConstraints={constraintsRef}>
+        </li>
+        <li>
+          <SiMaterialUi className="icon" /> Material ui
+        </li>
+        <li>
           <DiJavascript1 className="icon" />
           Java Script
-        </motion.li>
-        <motion.li drag dragConstraints={constraintsRef}>
+        </li>
+        <li>
           <SiTypescript className="icon" />
           Type Script
-        </motion.li>
-        <motion.li drag dragConstraints={constraintsRef}>
+        </li>
+        <li>
           <FaReact className="icon" />
           React
-        </motion.li>
-        <motion.li drag dragConstraints={constraintsRef}>
+        </li>
+        <li>
           <SiRedux className="icon" />
           Redux
-        </motion.li>
-        <motion.li drag dragConstraints={constraintsRef}>
-          <SiMaterialUi className="icon" /> Material ui
-        </motion.li>
-        <motion.li drag dragConstraints={constraintsRef}>
+        </li>
+        <li>
           <AiFillGithub className="icon" /> git
-        </motion.li>
+        </li>
       </ul>
     </TechnologiesComponent>
   );
 };
 
-const TechnologiesComponent = styled(motion.div)`
-  min-height: 100vh;
+const TechnologiesComponent = styled.div`
+  height: 100vh;
   display: flex;
   justify-content: Center;
   align-items: Center;
@@ -78,10 +74,6 @@ const TechnologiesComponent = styled(motion.div)`
   span {
     font-weight: bold;
     text-transform: uppercase;
-  }
-  p {
-    font-size: 0.7rem;
-    padding: 0.5rem 0;
   }
   ul {
     list-style: none;
@@ -100,6 +92,9 @@ const TechnologiesComponent = styled(motion.div)`
         margin: 0.5rem;
         flex-direction: column;
         text-align: center;
+      }
+      &:hover {
+        background-color: rgb(67, 185, 209);
       }
       .icon {
         margin-right: 0.5rem;

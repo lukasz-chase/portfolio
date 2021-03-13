@@ -19,13 +19,15 @@ const Home = () => {
       <AboutMe />
       <Technologies />
       <div className="projects-header">
-        Here are my projects, in order from oldest to newest.
-        <p>Find out how much i have improved.</p>
+        Here are my projects,
+        <p>
+          in order from oldest to newest. Find out how much i have improved.
+        </p>
       </div>
 
       <Project
         img={sacharoza}
-        info="My first react project in which user can look through a database of movies and tv-shows and inspect details"
+        info="My first react project in which users can look through a database of movies and tv-shows and inspect details"
         id="sacharoza"
         name="sacharoza"
         technologies="react and styled-components"
@@ -48,7 +50,7 @@ const Home = () => {
       />
       <Project
         img={parsec}
-        info="Project that I made to learn material-ui and its simplicity, find a character, location or episode from rick and morty's universe"
+        info="Project that I made to learn material-ui and its simplicity. It allows it's user to find a character, location or episode from rick and morty's universe"
         id="parsec"
         name="parsec"
         technologies="react, styled-components and material ui"
@@ -59,7 +61,7 @@ const Home = () => {
       />
       <Project
         img={benzen}
-        info="My biggest project, which is a simply a clothes website. I created my own JSON database for this project so you can add clothes, register, manage orders and users."
+        info="My biggest project yet. It's a e-commerce shop for clothes with json-server powered backend. If you log in as an admin you can manage store items and users(add, edit and delete)."
         id="benzen"
         name="benzen"
         technologies="react, styled-components, material ui and redux"
@@ -71,12 +73,12 @@ const Home = () => {
       />
       <Project
         img={portfolio}
-        info="Website that I created for reviewers to check out my work and data."
+        info="It is the site that you are currently browsing. It was made for reviewers to have easier access to my work."
         id="portfolio"
         name="portfolio"
         technologies="react, styled-components, react-scroll and framer motion"
         gitLink="https://github.com/luki752/portfolio"
-        liveLink="https://portfolio-omega.vercel.app/"
+        liveLink="https://portfolio-qfjjqndcn-luki752.vercel.app"
         textOrder="2"
         imageOrder="1"
       />
@@ -96,10 +98,10 @@ const HomeComponent = styled.div`
     font-size: 2rem;
     font-weight: bold;
     p {
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: normal;
       @media screen and (max-width: 960px) {
-        font-size: 1rem;
+        font-size: 0.5rem;
       }
     }
     @media screen and (max-width: 960px) {

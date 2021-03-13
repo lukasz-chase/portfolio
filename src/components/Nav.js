@@ -27,6 +27,7 @@ const Nav = () => {
             duration={500}
             spy={true}
             offset={-80}
+            activeClass="active"
             className="nav-link"
           >
             Łukasz Ścigaj
@@ -56,7 +57,7 @@ const Nav = () => {
             smooth={true}
             duration={500}
             spy={true}
-            offset={-80}
+            offset={-78}
             className="nav-link"
             onClick={() => setMenu(!menu)}
           >
@@ -87,7 +88,7 @@ const Nav = () => {
             smooth={true}
             duration={500}
             spy={true}
-            offset={-80}
+            offset={-77}
             className="nav-link"
             onClick={() => setMenu(!menu)}
           >
@@ -187,6 +188,9 @@ const NavComponent = styled.div`
             border-radius: 0;
           }
         }
+      }
+      .active {
+        border-bottom: 1px solid rgb(67, 185, 209);
       }
     }
   }

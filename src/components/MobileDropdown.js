@@ -22,7 +22,7 @@ const MobileDropdown = ({ toggle, setToggle, setMenu }) => {
               smooth={true}
               duration={500}
               spy={true}
-              offset={-80}
+              offset={-79}
               onClick={() => clickHandler()}
             >
               {item.title}
@@ -62,6 +62,9 @@ const MobileDropdownComponent = styled.div`
         height: 100%;
         text-decoration: none;
         color: #fff;
+      }
+      .active {
+        border-bottom: 1px solid rgb(67, 185, 209);
       }
     }
   }

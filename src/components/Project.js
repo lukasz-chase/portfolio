@@ -4,7 +4,7 @@ import styled from "styled-components";
 //animation
 import { motion } from "framer-motion";
 import { useScroll } from "./useScroll";
-import { imageAnimation } from "../animation";
+import { imageAnimation, textAnimations } from "../animation";
 
 const Project = ({
   img,
@@ -43,11 +43,15 @@ const Project = ({
           }}
         />
       </div>
-      <div
+      <motion.div
         className="details"
         style={{
           order: textOrder,
         }}
+        variants={textAnimations}
+        ref={element}
+        animate={controls}
+        initial="hidden"
       >
         <div className="name">
           <h1>{name}</h1>
@@ -73,7 +77,7 @@ const Project = ({
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
     </ProjectComponent>
   );
 };
@@ -84,6 +88,7 @@ const ProjectComponent = styled(motion.div)`
   display: flex;
   align-items: Center;
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  overflow: hidden;
   @media screen and (max-width: 1000px) {
     flex-direction: column;
   }
@@ -126,6 +131,7 @@ const ProjectComponent = styled(motion.div)`
     .info {
       padding: 0 1rem;
       font-size: 1rem;
+      text-align: center;
       @media screen and (max-width: 1000px) {
         font-size: 1rem;
         padding: 0 0.5rem;

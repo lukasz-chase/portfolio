@@ -33,7 +33,7 @@ const Contact = () => {
 };
 
 const ContactComponent = styled(motion.div)`
-  min-height: 100vh;
+  height: 100vh;
   background-color: #dcd9d4;
   background-image: linear-gradient(
       to bottom,

@@ -1,10 +1,6 @@
 import React from "react";
 //styling
 import styled from "styled-components";
-//animation
-import { motion } from "framer-motion";
-import { textAnimations } from "../animation.js";
-import { useScroll } from "./useScroll";
 //image
 import twarz from "../images/twarz.JPG";
 import Line from "./Line";
@@ -12,7 +8,6 @@ import Line from "./Line";
 import Wave from "./Wave";
 
 const AboutMe = () => {
-  const [element, controls] = useScroll();
   return (
     <AboutMeComponent id="about-me">
       <div className="image">
@@ -22,7 +17,7 @@ const AboutMe = () => {
       <div className="info">
         <div className="personal-info">
           <span>
-            Hello, my name is <b>Łukasz Ścigaj</b>.I am young, hard-working,
+            Hello, my name is <b>Łukasz Ścigaj</b>. I am young, hard-working,
             eager to work, eager to learn new technologies, always looking to
             improve my skills <b>programmer</b>.
           </span>
@@ -31,33 +26,19 @@ const AboutMe = () => {
         <Line />
         <div className="education">
           Education:
-          <motion.span
-            variants={textAnimations}
-            ref={element}
-            animate={controls}
-            initial="hidden"
-          >
+          <span>
             Bachelors in Computer Engineering
             <p>PWSZ Oświęcim 2020 - present</p>
-          </motion.span>
-          <motion.span
-            variants={textAnimations}
-            ref={element}
-            animate={controls}
-            initial="hidden"
-          >
-            Computer Science
-            <p>PCKTiB Oświęcim 2016-2020</p>{" "}
-          </motion.span>
+          </span>
         </div>
       </div>
     </AboutMeComponent>
   );
 };
 
-const AboutMeComponent = styled(motion.div)`
+const AboutMeComponent = styled.div`
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   padding-top: 5rem;
   @media screen and (max-width: 960px) {

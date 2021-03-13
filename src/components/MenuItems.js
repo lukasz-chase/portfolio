@@ -19,4 +19,9 @@ export const MenuItems = [
     path: "benzen",
     cName: "dropdown-link",
   },
+  {
+    title: "portfolio",
+    path: "portfolio",
+    cName: "dropdown-link",
+  },
 ];
