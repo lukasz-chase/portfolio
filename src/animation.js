@@ -20,10 +20,10 @@ export const imageAnimation = {
   },
 };
 
-export const technologiesAnimation = {
-  hidden: { y: 200 },
+export const textAnimations = {
+  hidden: { x: 400 },
   show: {
-    y: 0,
+    x: 0,
     transition: {
       duration: 0.75,
       ease: "easeOut",

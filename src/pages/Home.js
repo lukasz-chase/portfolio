@@ -92,7 +92,7 @@ const HomeComponent = styled.div`
     align-items: center;
     flex-direction: Column;
     text-align: Center;
-    height: 10vw;
+    height: 15vw;
     font-size: 2rem;
     font-weight: bold;
     p {

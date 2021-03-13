@@ -4,7 +4,7 @@ import styled from "styled-components";
 //animation
 import { motion } from "framer-motion";
 //icons
-import { AiFillGithub, AiFillFacebook, AiOutlineMail } from "react-icons/ai";
+import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 
 const Contact = () => {
   return (

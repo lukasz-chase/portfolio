@@ -3,7 +3,8 @@ import React from "react";
 import styled from "styled-components";
 //animation
 import { motion } from "framer-motion";
-import { technologiesAnimation } from "../animation.js";
+import { textAnimations } from "../animation.js";
+import { useScroll } from "./useScroll";
 //image
 import twarz from "../images/twarz.JPG";
 import Line from "./Line";
@@ -11,6 +12,7 @@ import Line from "./Line";
 import Wave from "./Wave";
 
 const AboutMe = () => {
+  const [element, controls] = useScroll();
   return (
     <AboutMeComponent id="about-me">
       <div className="image">
@@ -29,14 +31,24 @@ const AboutMe = () => {
         <Line />
         <div className="education">
           Education:
-          <span>
+          <motion.span
+            variants={textAnimations}
+            ref={element}
+            animate={controls}
+            initial="hidden"
+          >
             Bachelors in Computer Engineering
             <p>PWSZ Oświęcim 2020 - present</p>
-          </span>
-          <span>
+          </motion.span>
+          <motion.span
+            variants={textAnimations}
+            ref={element}
+            animate={controls}
+            initial="hidden"
+          >
             Computer Science
             <p>PCKTiB Oświęcim 2016-2020</p>{" "}
-          </span>
+          </motion.span>
         </div>
       </div>
     </AboutMeComponent>
