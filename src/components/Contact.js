@@ -22,19 +22,9 @@ const Contact = () => {
           </a>
         </div>
         <div className="contact">
-          <a
-            href="https://www.facebook.com/profile.php?id=100006156968986"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillFacebook className="icon" />
-            <h1>Message me on Facebook</h1>
-          </a>
-        </div>
-        <div className="contact">
           <a href="https://github.com/luki752" target="_blank" rel="noreferrer">
             <AiFillGithub className="icon" />
-            <h1>Look through my github</h1>
+            <h1>Check out my github</h1>
           </a>
         </div>
       </div>
@@ -77,21 +67,29 @@ const ContactComponent = styled(motion.div)`
       justify-content: center;
       flex: 1;
       font-size: 0.8rem;
+
       @media screen and (max-width: 1000px) {
         margin: 0.5rem 0rem;
         width: 100%;
         font-size: 0.6rem;
       }
       a {
+        height: 8rem;
+        width: 25rem;
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         text-align: center;
         color: black;
         text-decoration: none;
         background-color: white;
         border-radius: 1rem;
-        padding: 1rem;
         transition: 0.3s ease-in all;
         @media screen and (max-width: 1000px) {
           width: 100%;
+          margin: 0.5rem;
         }
         &:hover {
           background-color: rgb(67, 185, 209);

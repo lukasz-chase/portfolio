@@ -50,6 +50,19 @@ const Nav = () => {
             About me
           </Link>
         </li>
+        <li className="nav-item">
+          <Link
+            to="technologies"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}
+            className="nav-link"
+            onClick={() => setMenu(!menu)}
+          >
+            Technologies
+          </Link>
+        </li>
         <li
           className="nav-item dropdown"
           onMouseEnter={dropdownHandler}

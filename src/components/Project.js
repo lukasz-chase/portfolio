@@ -54,7 +54,7 @@ const Project = ({
         </div>
         <div className="info">{info}</div>
         <div className="technologies">
-          technologies used to create this project:{" "}
+          tech stack:{" "}
           <p>
             <b>{technologies}</b>.
           </p>
@@ -124,9 +124,11 @@ const ProjectComponent = styled(motion.div)`
       }
     }
     .info {
-      font-size: 1.5rem;
+      padding: 0 1rem;
+      font-size: 1rem;
       @media screen and (max-width: 1000px) {
         font-size: 1rem;
+        padding: 0 0.5rem;
       }
     }
     .technologies {

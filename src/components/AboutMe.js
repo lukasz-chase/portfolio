@@ -7,11 +7,6 @@ import { technologiesAnimation } from "../animation.js";
 //image
 import twarz from "../images/twarz.JPG";
 import Line from "./Line";
-//icons
-import { FaReact } from "react-icons/fa";
-import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
-import { SiStyledComponents, SiRedux, SiMaterialUi } from "react-icons/si";
-import { DiJavascript1, DiCss3, DiSass } from "react-icons/di";
 //components
 import Wave from "./Wave";
 
@@ -25,57 +20,24 @@ const AboutMe = () => {
       <div className="info">
         <div className="personal-info">
           <span>
-            Hello, my name is <b>Łukasz Ścigaj</b>. I'm studying{" "}
-            <b>informatics</b> on Małopolska Uczelnia Państwowa in Oświęcim, im
-            currently in second semester.{" "}
+            Hello, my name is <b>Łukasz Ścigaj</b>.I am young, hard-working,
+            eager to work, eager to learn new technologies, always looking to
+            improve my skills <b>programmer</b>.
           </span>
         </div>
 
         <Line />
-        <motion.div
-          className="technologies"
-          variants={technologiesAnimation}
-          initial="hidden"
-          animate="show"
-        >
-          <span>Im currently developing in technologies:</span>
-          <ul>
-            <li>
-              <AiFillHtml5 className="icon" />
-              HTML
-            </li>
-            <li>
-              <DiCss3 className="icon" />
-              CSS
-            </li>
-            <li>
-              <SiStyledComponents className="icon" />
-              Styled Components
-            </li>
-            <li>
-              <DiSass className="icon" />
-              SASS
-            </li>
-            <li>
-              <DiJavascript1 className="icon" />
-              Java Script
-            </li>
-            <li>
-              <FaReact className="icon" />
-              React
-            </li>
-            <li>
-              <SiRedux className="icon" />
-              Redux
-            </li>
-            <li>
-              <SiMaterialUi className="icon" /> Material ui
-            </li>
-            <li>
-              <AiFillGithub className="icon" /> git
-            </li>
-          </ul>
-        </motion.div>
+        <div className="education">
+          Education:
+          <span>
+            Bachelors in Computer Engineering
+            <p>PWSZ Oświęcim 2020 - present</p>
+          </span>
+          <span>
+            Computer Science
+            <p>PCKTiB Oświęcim 2016-2020</p>{" "}
+          </span>
+        </div>
       </div>
     </AboutMeComponent>
   );
@@ -137,44 +99,14 @@ const AboutMeComponent = styled(motion.div)`
         }
       }
     }
-    .technologies {
-      width: 90%;
-      @media screen and (max-width: 960px) {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .education {
+      display: flex;
+      flex-direction: column;
+      span {
+        font-size: 1.5rem;
       }
-      ul {
-        list-style: none;
-        display: grid;
-        grid-template-columns: auto auto auto;
-        li {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 1rem;
-          margin: 0.5rem;
-          border-radius: 1rem;
-          background-color: white;
-          transition: 0.3s ease-in all;
-          @media screen and (max-width: 960px) {
-            padding: 0.5rem;
-            flex-direction: column;
-            text-align: center;
-          }
-          &:hover {
-            background-color: rgb(67, 185, 209);
-          }
-          .icon {
-            margin-right: 0.5rem;
-            @media screen and (max-width: 960px) {
-              margin: 0;
-              font-size: 1.5rem;
-            }
-          }
-        }
+      p {
+        font-size: 1rem;
       }
     }
   }
