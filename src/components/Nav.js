@@ -25,9 +25,7 @@ const Nav = () => {
             to="about-me"
             smooth={true}
             duration={500}
-            spy={true}
             offset={-80}
-            activeClass="active"
             className="nav-link"
           >
             Łukasz Ścigaj
@@ -43,7 +41,6 @@ const Nav = () => {
             to="about-me"
             smooth={true}
             duration={500}
-            spy={true}
             offset={-80}
             className="nav-link"
             onClick={() => setMenu(!menu)}
@@ -57,7 +54,8 @@ const Nav = () => {
             smooth={true}
             duration={500}
             spy={true}
-            offset={-78}
+            exact="false"
+            offset={-80}
             className="nav-link"
             onClick={() => setMenu(!menu)}
           >
@@ -88,7 +86,8 @@ const Nav = () => {
             smooth={true}
             duration={500}
             spy={true}
-            offset={-77}
+            offset={-80}
+            exact="false"
             className="nav-link"
             onClick={() => setMenu(!menu)}
           >

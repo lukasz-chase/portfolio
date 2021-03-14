@@ -21,8 +21,7 @@ const MobileDropdown = ({ toggle, setToggle, setMenu }) => {
               to={item.path}
               smooth={true}
               duration={500}
-              spy={true}
-              offset={-79}
+              offset={-80}
               onClick={() => clickHandler()}
             >
               {item.title}

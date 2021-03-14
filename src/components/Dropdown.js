@@ -17,8 +17,7 @@ const Dropdown = () => {
               to={item.path}
               smooth={true}
               duration={500}
-              spy={true}
-              offset={-81}
+              offset={-80}
             >
               {item.title}
             </Link>

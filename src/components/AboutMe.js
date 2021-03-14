@@ -40,7 +40,6 @@ const AboutMeComponent = styled.div`
   display: flex;
   height: 100vh;
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-  padding-top: 5rem;
   @media screen and (max-width: 960px) {
     flex-direction: column;
     width: 100%;
@@ -95,7 +94,9 @@ const AboutMeComponent = styled.div`
     .education {
       display: flex;
       flex-direction: column;
-      padding: 0rem 2rem;
+      @media screen and (max-width: 960px) {
+        padding: 0rem 2rem;
+      }
       span {
         font-size: 1.5rem;
         @media screen and (max-width: 960px) {

@@ -84,7 +84,6 @@ const Project = ({
 
 const ProjectComponent = styled(motion.div)`
   height: 100vh;
-  width: 100%;
   display: flex;
   align-items: Center;
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
