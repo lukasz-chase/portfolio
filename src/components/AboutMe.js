@@ -11,7 +11,7 @@ const AboutMe = () => {
   return (
     <AboutMeComponent id="about-me">
       <div className="image">
-        <img src={twarz} alt="" />
+        <img src={twarz} alt="me" />
         <Wave />
       </div>
       <div className="info">
@@ -40,7 +40,9 @@ const AboutMeComponent = styled.div`
   display: flex;
   height: 100vh;
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  padding-top: 2rem;
   @media screen and (max-width: 960px) {
+    padding-top: 3rem;
     flex-direction: column;
     width: 100%;
   }
@@ -59,8 +61,8 @@ const AboutMeComponent = styled.div`
       border: 1px solid black;
       object-fit: cover;
       @media screen and (max-width: 960px) {
-        height: 14rem;
-        width: 11rem;
+        height: 19rem;
+        width: 14rem;
       }
     }
   }
