@@ -96,10 +96,8 @@ const Nav = () => {
 };
 
 const NavComponent = styled.div`
-  position: sticky;
+  position: fixed;
   height: 80px;
-  margin-top: -80px;
-  top: 0;
   width: 100%;
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   display: flex;

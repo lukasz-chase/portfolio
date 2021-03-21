@@ -9,7 +9,7 @@ const Line = () => {
 const LineComponent = styled.div`
   width: 90%;
   height: 0.2rem;
-  background-color: black;
+  background-color: white;
   margin: 1rem;
 `;
 
