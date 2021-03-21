@@ -53,8 +53,6 @@ const Nav = () => {
             to="technologies"
             smooth={true}
             duration={500}
-            spy={true}
-            exact="false"
             offset={-80}
             className="nav-link"
             onClick={() => setMenu(!menu)}
@@ -85,9 +83,7 @@ const Nav = () => {
             to="contact"
             smooth={true}
             duration={500}
-            spy={true}
             offset={-80}
-            exact="false"
             className="nav-link"
             onClick={() => setMenu(!menu)}
           >
@@ -100,8 +96,10 @@ const Nav = () => {
 };
 
 const NavComponent = styled.div`
-  position: fixed;
+  position: sticky;
   height: 80px;
+  margin-top: -80px;
+  top: 0;
   width: 100%;
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   display: flex;
@@ -187,9 +185,6 @@ const NavComponent = styled.div`
             border-radius: 0;
           }
         }
-      }
-      .active {
-        border-bottom: 1px solid rgb(67, 185, 209);
       }
     }
   }
