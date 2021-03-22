@@ -88,6 +88,10 @@ const Home = () => {
 };
 
 const HomeComponent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   .projects-header {
     display: Flex;
     justify-content: Center;
@@ -98,6 +102,7 @@ const HomeComponent = styled.div`
     font-size: 2rem;
     font-weight: bold;
     background-color: black;
+    width: 100%;
     background: linear-gradient(
       90deg,
       rgb(28, 27, 27) 0%,

@@ -84,11 +84,18 @@ const Project = ({
 
 const ProjectComponent = styled(motion.div)`
   display: flex;
-  align-items: Center;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  width: 90%;
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 244, 235, 0.8) 0%,
+    rgba(172, 203, 249, 0.8) 100%
+  );
   @media screen and (max-width: 1000px) {
     flex-direction: column;
+    width: 100%;
   }
   .image {
     margin: 1rem;
