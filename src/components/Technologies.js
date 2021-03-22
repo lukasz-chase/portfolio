@@ -61,7 +61,7 @@ const Technologies = () => {
 };
 
 const TechnologiesComponent = styled.div`
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: Center;
   align-items: Center;

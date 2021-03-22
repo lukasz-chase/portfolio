@@ -78,7 +78,7 @@ const Home = () => {
         name="portfolio"
         technologies="react, styled-components, react-scroll and framer motion"
         gitLink="https://github.com/luki752/portfolio"
-        liveLink="https://portfolio-qfjjqndcn-luki752.vercel.app"
+        liveLink="https://portoflio-omega.vercel.app/"
         textOrder="2"
         imageOrder="1"
       />
