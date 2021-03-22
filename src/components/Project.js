@@ -83,10 +83,8 @@ const Project = ({
 };
 
 const ProjectComponent = styled(motion.div)`
-  height: 100vh;
   display: flex;
   align-items: Center;
-  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   overflow: hidden;
   @media screen and (max-width: 1000px) {
     flex-direction: column;
@@ -94,37 +92,40 @@ const ProjectComponent = styled(motion.div)`
   .image {
     margin: 1rem;
     width: 100%;
-    height: 85%;
+    height: 90vh;
     @media screen and (max-width: 1000px) {
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 50%;
     }
     img {
-      height: 100%;
+      height: 90%;
       width: 100%;
       object-fit: cover;
       @media screen and (max-width: 1000px) {
-        height: 20rem;
         clip-path: none;
       }
     }
   }
   .details {
     width: 40%;
-    height: 85%;
+    height: 90vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: Center;
+    color: white;
     @media screen and (max-width: 1000px) {
       width: 100%;
+      height: 50%;
     }
     .name {
       text-transform: upperCase;
       padding: 1rem;
       @media screen and (max-width: 1000px) {
         padding: 0.5rem;
+        font-size: 0.8rem;
       }
     }
     .info {
@@ -132,7 +133,7 @@ const ProjectComponent = styled(motion.div)`
       font-size: 1rem;
       text-align: center;
       @media screen and (max-width: 1000px) {
-        font-size: 1rem;
+        font-size: 0.7rem;
         padding: 0 0.5rem;
       }
     }
@@ -141,6 +142,7 @@ const ProjectComponent = styled(motion.div)`
       text-align: Center;
       @media screen and (max-width: 1000px) {
         padding: 0.5rem;
+        font-size: 0.7rem;
       }
     }
     .links {
@@ -153,7 +155,7 @@ const ProjectComponent = styled(motion.div)`
         li {
           margin: 1.5rem 0;
           @media screen and (max-width: 1000px) {
-            margin: 1rem 0;
+            margin: 0.5rem 0;
           }
           a {
             padding: 1rem;
@@ -168,6 +170,7 @@ const ProjectComponent = styled(motion.div)`
             }
             @media screen and (max-width: 1000px) {
               padding: 0.5rem;
+              font-size: 0.7rem;
             }
           }
         }

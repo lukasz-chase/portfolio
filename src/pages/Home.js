@@ -8,7 +8,7 @@ import Technologies from "../components/Technologies";
 import Contact from "../components/Contact";
 //images
 import sacharoza from "../images/sacharoza.JPG";
-import portfolio from "../images/portfolio.JPG";
+import portfolio from "../images/portfolio.PNG";
 import hepar from "../images/hepar.jpg";
 import parsec from "../images/parsec.jpg";
 import benzen from "../images/benzen.jpg";
@@ -97,7 +97,15 @@ const HomeComponent = styled.div`
     height: 15vw;
     font-size: 2rem;
     font-weight: bold;
+    background-color: black;
+    background: linear-gradient(
+      90deg,
+      rgb(28, 27, 27) 0%,
+      rgb(26, 23, 23) 100%
+    );
+    color: White;
     p {
+      color: rgba(255, 255, 255, 0.4);
       font-size: 1rem;
       font-weight: normal;
       @media screen and (max-width: 960px) {

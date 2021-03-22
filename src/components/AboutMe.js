@@ -4,17 +4,13 @@ import styled from "styled-components";
 //image
 import twarz from "../images/twarz.JPG";
 import Line from "./Line";
+
 //components
 import Wave from "./Wave";
-//video
-import video from "../videos/video.mp4";
 
 const AboutMe = () => {
   return (
     <AboutMeComponent id="about-me">
-      <div className="background">
-        <video autoPlay loop muted src={video} type="video/mp4" />
-      </div>
       <div className="image">
         <img src={twarz} alt="me" />
         <Wave />
@@ -44,28 +40,10 @@ const AboutMe = () => {
 const AboutMeComponent = styled.div`
   display: flex;
   height: 100vh;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   @media screen and (max-width: 960px) {
     padding-top: 3rem;
     flex-direction: column;
     width: 100%;
-  }
-  .background {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    video {
-      width: 100%;
-      height: 100%;
-      -o-object-fit: cover;
-      object-fit: cover;
-      background: #232a34;
-    }
   }
   .image {
     flex: 1;

@@ -34,22 +34,11 @@ const Contact = () => {
 
 const ContactComponent = styled(motion.div)`
   height: 100vh;
-  background-color: #dcd9d4;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.5) 0%,
-      rgba(0, 0, 0, 0.5) 100%
-    ),
-    radial-gradient(
-      at 50% 0%,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(0, 0, 0, 0.5) 50%
-    );
-  background-blend-mode: soft-light, screen;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: white;
   .header {
     font-size: 3rem;
   }

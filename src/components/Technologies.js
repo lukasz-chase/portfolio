@@ -67,13 +67,14 @@ const TechnologiesComponent = styled.div`
   align-items: Center;
   flex-direction: column;
   font-size: 2rem;
-  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   @media screen and (max-width: 960px) {
     font-size: 1rem;
+    height: 70vh;
   }
   span {
     font-weight: bold;
     text-transform: uppercase;
+    color: white;
   }
   ul {
     list-style: none;
