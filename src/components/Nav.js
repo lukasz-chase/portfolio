@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 //react router
 import { Link } from "react-scroll";
 //styling
@@ -12,13 +12,26 @@ const Nav = () => {
   const [dropdown, setDropdown] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [menu, setMenu] = useState(false);
+  const [scrollNav, setScrollNav] = useState(false);
   //handlers
   const dropdownHandler = () =>
     window.innerWidth < 960 ? setDropdown(false) : setDropdown(true);
   const toggleDropdown = () =>
     window.innerWidth < 960 ? setToggle(!toggle) : setToggle(false);
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
+
   return (
-    <NavComponent>
+    <NavComponent scrollNav={scrollNav}>
       <div className="nav-logo">
         <span>
           <Link
@@ -99,12 +112,16 @@ const NavComponent = styled.div`
   position: fixed;
   height: 80px;
   width: 100%;
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  background: ${({ scrollNav }) =>
+    scrollNav
+      ? "linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%)"
+      : "transparent"};
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
   z-index: 10;
+  transition: all 2s ease-in-out;
   @media screen and (max-width: 960px) {
     justify-content: space-between;
   }

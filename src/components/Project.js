@@ -105,6 +105,7 @@ const ProjectComponent = styled(motion.div)`
       object-fit: cover;
       @media screen and (max-width: 1000px) {
         clip-path: none;
+        height: 100%;
       }
     }
   }
