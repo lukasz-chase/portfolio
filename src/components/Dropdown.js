@@ -36,11 +36,30 @@ const DropdownComponent = styled.div`
     list-style: none;
     text-align: start;
     li {
-      padding: 1rem;
       background: rgba(0, 0, 0, 0.9);
+      padding: 1rem;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        height: 0;
+        width: 100%;
+        visibility: hidden;
+        transition: all 0.4s ease-out;
+        z-index: -1;
+      }
       &:hover {
-        background-color: rgb(67, 185, 209);
+        transition: all 0.2s ease-out;
         cursor: pointer;
+        background: transparent;
+        &::before {
+          background: rgb(67, 185, 209);
+          height: 100%;
+          visibility: visible;
+        }
       }
       &:first-letter {
         text-transform: upperCase;
@@ -51,6 +70,7 @@ const DropdownComponent = styled.div`
         height: 100%;
         text-decoration: none;
         color: #fff;
+        z-index: 2;
       }
     }
   }

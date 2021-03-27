@@ -182,14 +182,31 @@ const NavComponent = styled.div`
       height: 80px;
       .nav-link,
       .dropdown-header {
+        position: relative;
         color: white;
         text-decoration: none;
         padding: 0.5rem 1rem;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 100%;
+          height: 0;
+          width: 100%;
+          background: rgb(67, 185, 209);
+          visibility: hidden;
+          transition: all 0.4s ease-out;
+          z-index: -1;
+        }
         &:hover {
-          background-color: rgb(67, 185, 209);
           border-radius: 4px;
           transition: all 0.2s ease-out;
           cursor: pointer;
+          &::before {
+            height: 100%;
+            visibility: visible;
+          }
         }
         @media screen and (max-width: 960px) {
           text-align: center;
