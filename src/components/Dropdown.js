@@ -54,7 +54,7 @@ const DropdownComponent = styled.div`
       &:hover {
         transition: all 0.2s ease-out;
         cursor: pointer;
-        background: transparent;
+        z-index: 1;
         &::before {
           background: rgb(67, 185, 209);
           height: 100%;
