@@ -12,6 +12,7 @@ import portfolio from "../images/portfolio.PNG";
 import hepar from "../images/hepar.jpg";
 import parsec from "../images/parsec.jpg";
 import benzen from "../images/benzen.jpg";
+import amina from "../images/Amina.PNG";
 
 const Home = () => {
   return (
@@ -72,6 +73,17 @@ const Home = () => {
         imageDirection="left"
       />
       <Project
+        img={amina}
+        info="Project that I made to learn TypeScript and master my skills"
+        id="amina"
+        name="amina"
+        technologies="react, styled-components, TypeScript, zustand and material ui"
+        gitLink="https://github.com/luki752/amina"
+        liveLink="https://amina-one.vercel.app/"
+        textOrder="2"
+        imageOrder="1"
+      />
+      <Project
         img={portfolio}
         info="It is the site that you are currently browsing. It was made for reviewers to have easier access to my work."
         id="portfolio"
@@ -79,8 +91,8 @@ const Home = () => {
         technologies="react, styled-components, react-scroll and framer motion"
         gitLink="https://github.com/luki752/portfolio"
         liveLink="https://portoflio-omega.vercel.app/"
-        textOrder="2"
-        imageOrder="1"
+        textOrder="1"
+        imageOrder="2"
       />
       <Contact />
     </HomeComponent>
