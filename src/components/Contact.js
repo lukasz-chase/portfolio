@@ -29,7 +29,7 @@ const Contact = () => {
         </div>
         <div className="contact">
           <a
-            href="https://www.linkedin.com/in/%C5%82ukasz-%C5%9Bcigaj-bba82b212/"
+            href="https://www.linkedin.com/in/lukasz-scigaj/"
             target="_blank"
             rel="noreferrer"
           >
