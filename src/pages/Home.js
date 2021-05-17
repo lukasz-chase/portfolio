@@ -74,7 +74,7 @@ const Home = () => {
       />
       <Project
         img={amina}
-        info="Project that I made to learn TypeScript and master my skills"
+        info="Project that I made to learn TypeScript and zustand. Find a community that you like and join it, like posts that you find interesting and comment them. Create your own posts and communities."
         id="amina"
         name="amina"
         technologies="react, styled-components, TypeScript, zustand and material ui"

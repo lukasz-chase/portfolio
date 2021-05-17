@@ -52,6 +52,7 @@ const Technologies = () => {
           <SiRedux className="icon" />
           Redux
         </li>
+        <li>Zustand</li>
         <li>
           <AiFillGithub className="icon" /> git
         </li>

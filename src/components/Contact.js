@@ -4,7 +4,7 @@ import styled from "styled-components";
 //animation
 import { motion } from "framer-motion";
 //icons
-import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
+import { AiFillGithub, AiOutlineMail, AiFillLinkedin } from "react-icons/ai";
 
 const Contact = () => {
   return (
@@ -25,6 +25,16 @@ const Contact = () => {
           <a href="https://github.com/luki752" target="_blank" rel="noreferrer">
             <AiFillGithub className="icon" />
             <h1>Check out my github</h1>
+          </a>
+        </div>
+        <div className="contact">
+          <a
+            href="https://www.linkedin.com/in/%C5%82ukasz-%C5%9Bcigaj-bba82b212/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiFillLinkedin className="icon" />
+            <h1>Find me on linkedin</h1>
           </a>
         </div>
       </div>
