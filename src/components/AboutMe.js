@@ -56,8 +56,8 @@ const AboutMeComponent = styled.div`
     }
     img {
       z-index: 2;
-      height: 35rem;
-      width: 25rem;
+      height: 25rem;
+      width: 20rem;
       border: 1px solid black;
       object-fit: cover;
       @media screen and (max-width: 960px) {
