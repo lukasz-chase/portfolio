@@ -49,6 +49,9 @@ const ContactComponent = styled(motion.div)`
   align-items: center;
   flex-direction: column;
   color: white;
+  @media screen and (max-width: 1000px) {
+    height: 90vh;
+  }
   .header {
     font-size: 3rem;
   }

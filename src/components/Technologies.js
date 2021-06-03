@@ -27,22 +27,22 @@ const Technologies = () => {
         </li>
         <li>
           <SiStyledComponents className="icon" />
-          Styled Components
+          styled-components
         </li>
         <li>
           <DiSass className="icon" />
-          SASS
+          Sass
         </li>
         <li>
           <SiMaterialUi className="icon" /> Material ui
         </li>
         <li>
           <DiJavascript1 className="icon" />
-          Java Script
+          JavaScript
         </li>
         <li>
           <SiTypescript className="icon" />
-          Type Script
+          TypeScript
         </li>
         <li>
           <FaReact className="icon" />
@@ -70,7 +70,7 @@ const TechnologiesComponent = styled.div`
   font-size: 2rem;
   @media screen and (max-width: 960px) {
     font-size: 1rem;
-    height: 70vh;
+    height: 65vh;
   }
   span {
     font-weight: bold;
@@ -94,9 +94,6 @@ const TechnologiesComponent = styled.div`
         margin: 0.5rem;
         flex-direction: column;
         text-align: center;
-      }
-      &:hover {
-        background-color: rgb(67, 185, 209);
       }
       .icon {
         margin-right: 0.5rem;

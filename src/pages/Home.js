@@ -9,7 +9,7 @@ import Contact from "../components/Contact";
 //images
 import sacharoza from "../images/sacharoza.JPG";
 import portfolio from "../images/portfolio.PNG";
-import hepar from "../images/hepar.jpg";
+// import hepar from "../images/hepar.jpg";
 import parsec from "../images/parsec.jpg";
 import benzen from "../images/benzen.jpg";
 import amina from "../images/Amina.PNG";
@@ -38,20 +38,8 @@ const Home = () => {
         imageOrder="1"
       />
       <Project
-        img={hepar}
-        info="Web application with food trivia, jokes and recipes. Find a recipe you like, check every ingredient you have and every step you make. If you have food related questions in bottom-right corner theres a chatbot, that will answer them."
-        id="hepar"
-        name="hepar"
-        technologies="react, scss and redux"
-        gitLink="https://github.com/luki752/hepar"
-        liveLink="https://hepar.vercel.app/"
-        textOrder="1"
-        imageOrder="2"
-        imageDirection="left"
-      />
-      <Project
         img={parsec}
-        info="Project that I made to learn material-ui and its simplicity. It allows it's user to find a character, location or episode from rick and morty's universe"
+        info="Project that I made to learn material-ui and its simplicity. It allows its user to find a character, location or episode from rick and morty's universe"
         id="parsec"
         name="parsec"
         technologies="react, styled-components and material ui"
@@ -126,7 +114,7 @@ const HomeComponent = styled.div`
       font-size: 1rem;
       font-weight: normal;
       @media screen and (max-width: 960px) {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
       }
     }
     @media screen and (max-width: 960px) {

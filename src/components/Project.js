@@ -87,12 +87,14 @@ const ProjectComponent = styled(motion.div)`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  width: 90%;
+  width: 95%;
   background-image: linear-gradient(
     to top,
     rgba(255, 244, 235, 0.8) 0%,
     rgba(172, 203, 249, 0.8) 100%
   );
+  margin: 1rem;
+  border-radius: 5px;
   @media screen and (max-width: 1000px) {
     flex-direction: column;
     width: 100%;
@@ -127,21 +129,22 @@ const ProjectComponent = styled(motion.div)`
     @media screen and (max-width: 1000px) {
       width: 100%;
       height: 50%;
+      padding-bottom: 0.5rem;
     }
     .name {
       text-transform: upperCase;
       padding: 1rem;
       @media screen and (max-width: 1000px) {
         padding: 0.5rem;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
       }
     }
     .info {
       padding: 0 1rem;
-      font-size: 1rem;
+      font-size: 1.2rem;
       text-align: center;
       @media screen and (max-width: 1000px) {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         padding: 0 0.5rem;
       }
     }
@@ -150,7 +153,7 @@ const ProjectComponent = styled(motion.div)`
       text-align: Center;
       @media screen and (max-width: 1000px) {
         padding: 0.5rem;
-        font-size: 0.7rem;
+        font-size: 0.9rem;
       }
     }
     .links {
@@ -178,7 +181,7 @@ const ProjectComponent = styled(motion.div)`
             }
             @media screen and (max-width: 1000px) {
               padding: 0.5rem;
-              font-size: 0.7rem;
+              font-size: 0.9rem;
             }
           }
         }

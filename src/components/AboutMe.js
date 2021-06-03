@@ -2,10 +2,9 @@ import React from "react";
 //styling
 import styled from "styled-components";
 //image
-import twarz from "../images/twarz.JPG";
-import Line from "./Line";
-
+import twarz from "../images/twarz.png";
 //components
+import Line from "./Line";
 import Wave from "./Wave";
 
 const AboutMe = () => {
@@ -18,9 +17,11 @@ const AboutMe = () => {
       <div className="info">
         <div className="personal-info">
           <span>
-            Hello, my name is <b>Łukasz Ścigaj</b>. I am young, hard-working,
-            eager to work, eager to learn new technologies, always looking to
-            improve my skills <b>programmer</b>.
+            Hello, my name is <b>Łukasz Ścigaj</b>. I am a young, diligent and
+            goal-oriented <b>developer</b>.
+            <p>
+              Always eager to learn new technologies and expand my skillset.
+            </p>
           </span>
         </div>
 
@@ -44,6 +45,7 @@ const AboutMeComponent = styled.div`
     padding-top: 3rem;
     flex-direction: column;
     width: 100%;
+    height: 50vh;
   }
   .image {
     flex: 1;
@@ -53,22 +55,23 @@ const AboutMeComponent = styled.div`
     padding-top: 2rem;
     @media screen and (max-width: 960px) {
       width: 100%;
+      padding-top: 1.5rem;
     }
     img {
       z-index: 2;
       height: 25rem;
       width: 20rem;
-      border: 1px solid black;
       object-fit: cover;
+      border-radius: 50px;
       @media screen and (max-width: 960px) {
-        height: 19rem;
-        width: 14rem;
+        height: 12rem;
+        width: 9rem;
       }
     }
   }
   .info {
     z-index: 2;
-    flex: 1;
+    flex: 1.2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,9 +82,10 @@ const AboutMeComponent = styled.div`
       justify-content: flex-start;
       align-items: center;
       width: 100%;
+      padding-top: 1rem;
     }
     .personal-info {
-      width: 80%;
+      width: 90%;
       color: white;
       @media screen and (max-width: 960px) {
         display: flex;
@@ -99,7 +103,7 @@ const AboutMeComponent = styled.div`
       flex-direction: column;
       color: white;
       @media screen and (max-width: 960px) {
-        padding: 0rem 2rem;
+        width: 90%;
       }
       span {
         font-size: 1.5rem;
