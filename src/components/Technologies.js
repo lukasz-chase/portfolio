@@ -34,7 +34,7 @@ const Technologies = () => {
           Sass
         </li>
         <li>
-          <SiMaterialUi className="icon" /> Material ui
+          <SiMaterialUi className="icon" /> Material-UI
         </li>
         <li>
           <DiJavascript1 className="icon" />
