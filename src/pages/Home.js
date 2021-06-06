@@ -33,7 +33,7 @@ const Home = () => {
         name="sacharoza"
         technologies="react and styled-components"
         gitLink="https://github.com/luki752/sacharoza"
-        liveLink="https://saharoza.vercel.app/"
+        liveLink="https://nifty-shirley-d10bfa.netlify.app/"
         textOrder="2"
         imageOrder="1"
       />
@@ -44,7 +44,7 @@ const Home = () => {
         name="parsec"
         technologies="react, styled-components and material ui"
         gitLink="https://github.com/luki752/parsec"
-        liveLink="https://parsec.vercel.app/"
+        liveLink="https://sharp-nightingale-681b75.netlify.app/"
         textOrder="2"
         imageOrder="1"
       />
@@ -55,7 +55,7 @@ const Home = () => {
         name="benzen"
         technologies="react, styled-components, material ui and redux"
         gitLink="https://github.com/luki752/benzen"
-        liveLink="https://benzen.vercel.app/"
+        liveLink="https://relaxed-ramanujan-7db2a6.netlify.app/"
         textOrder="1"
         imageOrder="2"
         imageDirection="left"
@@ -67,7 +67,7 @@ const Home = () => {
         name="amina"
         technologies="react, styled-components, TypeScript, zustand and material ui"
         gitLink="https://github.com/luki752/amina"
-        liveLink="https://amina-one.vercel.app/"
+        liveLink="https://kind-edison-442595.netlify.app/"
         textOrder="2"
         imageOrder="1"
       />
@@ -78,7 +78,7 @@ const Home = () => {
         name="portfolio"
         technologies="react, styled-components, react-scroll and framer motion"
         gitLink="https://github.com/luki752/portfolio"
-        liveLink="https://portoflio-omega.vercel.app/"
+        liveLink="https://lukasz-portfolio.herokuapp.com/"
         textOrder="1"
         imageOrder="2"
       />
