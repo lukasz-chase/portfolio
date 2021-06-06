@@ -34,8 +34,8 @@ const Home = () => {
         technologies="react and styled-components"
         gitLink="https://github.com/luki752/sacharoza"
         liveLink="https://nifty-shirley-d10bfa.netlify.app/"
-        textOrder="2"
-        imageOrder="1"
+        textOrder="1"
+        imageOrder="2"
       />
       <Project
         img={parsec}
