@@ -1,61 +1,19 @@
 import React from "react";
 //styling
 import styled from "styled-components";
-//icons
-import { FaReact } from "react-icons/fa";
-import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
-import {
-  SiStyledComponents,
-  SiRedux,
-  SiMaterialUi,
-  SiTypescript,
-} from "react-icons/si";
-import { DiJavascript1, DiCss3, DiSass } from "react-icons/di";
-
+//data
+import { technologies } from "../descriptions/technologies";
 const Technologies = () => {
   return (
     <TechnologiesComponent id="technologies">
       <span>My current tech stack includes:</span>
       <ul>
-        <li>
-          <AiFillHtml5 className="icon" />
-          HTML
-        </li>
-        <li>
-          <DiCss3 className="icon" />
-          CSS
-        </li>
-        <li>
-          <SiStyledComponents className="icon" />
-          styled-components
-        </li>
-        <li>
-          <DiSass className="icon" />
-          Sass
-        </li>
-        <li>
-          <SiMaterialUi className="icon" /> Material-UI
-        </li>
-        <li>
-          <DiJavascript1 className="icon" />
-          JavaScript
-        </li>
-        <li>
-          <SiTypescript className="icon" />
-          TypeScript
-        </li>
-        <li>
-          <FaReact className="icon" />
-          React
-        </li>
-        <li>
-          <SiRedux className="icon" />
-          Redux
-        </li>
-        <li>Zustand</li>
-        <li>
-          <AiFillGithub className="icon" /> git
-        </li>
+        {technologies.map(({ icon, label }) => (
+          <li>
+            {icon}
+            {label}
+          </li>
+        ))}
       </ul>
     </TechnologiesComponent>
   );

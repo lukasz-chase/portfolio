@@ -45,8 +45,8 @@ const DropdownComponent = styled.div`
         bottom: 0;
         left: 0;
         right: 100%;
-        height: 0;
-        width: 100%;
+        height: 100%;
+        width: 0;
         visibility: hidden;
         transition: all 0.4s ease-out;
         z-index: -1;
@@ -57,7 +57,7 @@ const DropdownComponent = styled.div`
         z-index: 1;
         &::before {
           background: rgb(67, 185, 209);
-          height: 100%;
+          width: 100%;
           visibility: visible;
         }
       }

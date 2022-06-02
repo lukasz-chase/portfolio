@@ -6,13 +6,8 @@ import AboutMe from "../components/AboutMe";
 import Project from "../components/Project";
 import Technologies from "../components/Technologies";
 import Contact from "../components/Contact";
-//images
-import sacharoza from "../images/sacharoza.JPG";
-import portfolio from "../images/portfolio.PNG";
-// import hepar from "../images/hepar.jpg";
-import parsec from "../images/parsec.jpg";
-import benzen from "../images/benzen.jpg";
-import amina from "../images/Amina.PNG";
+//data
+import { projects } from "../descriptions/projects";
 
 const Home = () => {
   return (
@@ -25,63 +20,9 @@ const Home = () => {
           in order from oldest to newest. Find out how much i have improved.
         </p>
       </div>
-
-      <Project
-        img={sacharoza}
-        info="My first react project in which users can look through a database of movies and tv-shows and inspect details"
-        id="sacharoza"
-        name="sacharoza"
-        technologies="react and styled-components"
-        gitLink="https://github.com/luki752/sacharoza"
-        liveLink="https://nifty-shirley-d10bfa.netlify.app/"
-        textOrder="1"
-        imageOrder="2"
-      />
-      <Project
-        img={parsec}
-        info="Project that I made to learn material-ui and its simplicity. It allows its user to find a character, location or episode from rick and morty's universe"
-        id="parsec"
-        name="parsec"
-        technologies="react, styled-components and material ui"
-        gitLink="https://github.com/luki752/parsec"
-        liveLink="https://sharp-nightingale-681b75.netlify.app/"
-        textOrder="2"
-        imageOrder="1"
-      />
-      <Project
-        img={benzen}
-        info="My biggest project yet. It's a e-commerce shop for clothes with json-server powered backend. If you log in as an admin you can manage store items and users(add, edit and delete)."
-        id="benzen"
-        name="benzen"
-        technologies="react, styled-components, material ui and redux"
-        gitLink="https://github.com/luki752/benzen"
-        liveLink="https://relaxed-ramanujan-7db2a6.netlify.app/"
-        textOrder="1"
-        imageOrder="2"
-        imageDirection="left"
-      />
-      <Project
-        img={amina}
-        info="Project that I made to learn TypeScript and zustand. Find a community that you like and join it, like posts that you find interesting and comment them. Create your own posts and communities."
-        id="amina"
-        name="amina"
-        technologies="react, styled-components, TypeScript, zustand and material ui"
-        gitLink="https://github.com/luki752/amina"
-        liveLink="https://kind-edison-442595.netlify.app/"
-        textOrder="2"
-        imageOrder="1"
-      />
-      <Project
-        img={portfolio}
-        info="It is the site that you are currently browsing. It was made for reviewers to have easier access to my work."
-        id="portfolio"
-        name="portfolio"
-        technologies="react, styled-components, react-scroll and framer motion"
-        gitLink="https://github.com/luki752/portfolio"
-        liveLink="https://lukasz-portfolio.herokuapp.com/"
-        textOrder="1"
-        imageOrder="2"
-      />
+      {projects.map((project) => (
+        <Project project={project} />
+      ))}
       <Contact />
     </HomeComponent>
   );

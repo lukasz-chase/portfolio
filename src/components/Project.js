@@ -6,18 +6,19 @@ import { motion } from "framer-motion";
 import { useScroll } from "./useScroll";
 import { imageAnimation, textAnimations } from "../animation";
 
-const Project = ({
-  img,
-  name,
-  info,
-  technologies,
-  gitLink,
-  liveLink,
-  id,
-  imageOrder,
-  textOrder,
-  imageDirection,
-}) => {
+const Project = ({ project }) => {
+  const {
+    img,
+    name,
+    info,
+    technologies,
+    buttons,
+    id,
+    imageOrder,
+    textOrder,
+    imageDirection,
+    backend,
+  } = project;
   const [element, controls] = useScroll();
   return (
     <ProjectComponent id={id}>
@@ -58,23 +59,28 @@ const Project = ({
         </div>
         <div className="info">{info}</div>
         <div className="technologies">
-          tech stack:{" "}
+          {backend ? "frontend " : ""}tech stack:{" "}
           <p>
             <b>{technologies}</b>.
           </p>
+          {backend && (
+            <>
+              backend tech stack:{" "}
+              <p>
+                <b>{backend}</b>.
+              </p>
+            </>
+          )}
         </div>
         <div className="links">
           <ul>
-            <li>
-              <a href={liveLink} target="_blank" rel="noreferrer">
-                See it live
-              </a>
-            </li>
-            <li>
-              <a href={gitLink} target="_blank" rel="noreferrer">
-                Check the code on github
-              </a>
-            </li>
+            {buttons.map((button) => (
+              <li>
+                <a href={button.link} target="_blank" rel="noreferrer">
+                  {button.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </motion.div>

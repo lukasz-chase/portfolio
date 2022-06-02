@@ -10,11 +10,12 @@ import Wave from "./Wave";
 const AboutMe = () => {
   return (
     <AboutMeComponent id="about-me">
+      <div className="wrapper">
       <div className="image">
         <img src={twarz} alt="me" />
         <Wave />
       </div>
-      <div className="info">
+        <Line />
         <div className="personal-info">
           <span>
             Hello, my name is <b>Łukasz Ścigaj</b>. I am a young, diligent and
@@ -24,13 +25,22 @@ const AboutMe = () => {
             </p>
           </span>
         </div>
+      </div>
 
-        <Line />
+
+      <div className="info">
         <div className="education">
           Education:
           <span>
             Bachelors in Computer Engineering
             <p>PWSZ Oświęcim 2020 - present</p>
+          </span>
+        </div>
+        <div className="experience">
+          Experience:
+          <span>
+            Full-Stack Developer
+            <p>GOOD 2021.08 - present</p>
           </span>
         </div>
       </div>
@@ -41,14 +51,37 @@ const AboutMe = () => {
 const AboutMeComponent = styled.div`
   display: flex;
   height: 100vh;
+  font-size: 2rem;
+  color: white;
   @media screen and (max-width: 960px) {
+    font-size: 1rem;
     padding-top: 3rem;
     flex-direction: column;
     width: 100%;
     height: 50vh;
   }
-  .image {
+  .wrapper{
     flex: 1;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+  .personal-info {
+      width: 90%;
+      @media screen and (max-width: 960px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      span {
+        b {
+          color: rgb(37, 136, 156);
+        }
+      }
+    }
+  }
+  .image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,34 +104,22 @@ const AboutMeComponent = styled.div`
   }
   .info {
     z-index: 2;
-    flex: 1.2;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    font-size: 2rem;
+    gap: 3rem;
+    font-size: 3rem;
     @media screen and (max-width: 960px) {
       font-size: 1rem;
       justify-content: flex-start;
       align-items: center;
       width: 100%;
       padding-top: 1rem;
+      gap: 1rem;
     }
-    .personal-info {
-      width: 90%;
-      color: white;
-      @media screen and (max-width: 960px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      span {
-        b {
-          color: rgb(37, 136, 156);
-        }
-      }
-    }
-    .education {
+    .education, .experience {
       display: flex;
       flex-direction: column;
       color: white;
@@ -106,7 +127,7 @@ const AboutMeComponent = styled.div`
         width: 90%;
       }
       span {
-        font-size: 1.5rem;
+        font-size: 2rem;
         @media screen and (max-width: 960px) {
           font-size: 1rem;
         }
