@@ -6,6 +6,9 @@ import styled from "styled-components";
 //components
 import Dropdown from "./Dropdown";
 import MobileDropdown from "./MobileDropdown";
+//icons
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const Nav = () => {
   //state
@@ -45,9 +48,21 @@ const Nav = () => {
           </Link>
         </span>
       </div>
-      <div className="menu-icon" onClick={() => setMenu(!menu)}>
-        <i className={menu ? "fas fa-times" : "fas fa-bars"} />
-      </div>
+
+      {menu ? (
+        <AiOutlineClose
+          size="2em"
+          className="menu-icon"
+          onClick={() => setMenu(!menu)}
+        />
+      ) : (
+        <AiOutlineMenu
+          size="2em"
+          className="menu-icon"
+          onClick={() => setMenu(!menu)}
+        />
+      )}
+
       <ul className={menu ? "nav-menu active" : "nav-menu"}>
         <li className="nav-item">
           <Link
@@ -80,7 +95,7 @@ const Nav = () => {
           onClick={() => toggleDropdown()}
         >
           <span className="dropdown-header">
-            Projects <i className="fas fa-caret-down" />
+            Projects <IoMdArrowDropdown />
           </span>
           {dropdown && <Dropdown />}
         </li>
@@ -138,22 +153,12 @@ const NavComponent = styled.div`
   }
   .menu-icon {
     display: none;
+    color: #fff;
+    padding: 1rem;
     @media screen and (max-width: 960px) {
       display: block;
       font-size: 1rem;
       cursor: pointer;
-    }
-    .fa-bars {
-      color: #fff;
-    }
-  }
-  .fa-bars,
-  .fa-times {
-    margin-right: 20px;
-    font-size: 1.6rem;
-    @media screen and (max-width: 960px) {
-      color: #fff;
-      font-size: 1.5rem;
     }
   }
   .nav-menu {
@@ -167,6 +172,7 @@ const NavComponent = styled.div`
     margin-right: 2rem;
     @media screen and (max-width: 960px) {
       display: flex;
+      justify-content: flex-start;
       flex-direction: column;
       width: 100%;
       height: 110vh;
@@ -179,6 +185,7 @@ const NavComponent = styled.div`
     .nav-item {
       display: flex;
       align-items: center;
+      justify-content: center;
       height: 80px;
       .nav-link,
       .dropdown-header {
@@ -192,8 +199,8 @@ const NavComponent = styled.div`
           bottom: 0;
           left: 0;
           right: 100%;
-          height: 0;
-          width: 100%;
+          height: 100%;
+          width: 0;
           background: rgb(67, 185, 209);
           visibility: hidden;
           transition: all 0.4s ease-out;
@@ -204,7 +211,7 @@ const NavComponent = styled.div`
           transition: all 0.2s ease-out;
           cursor: pointer;
           &::before {
-            height: 100%;
+            width: 100%;
             visibility: visible;
           }
         }

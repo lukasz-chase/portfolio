@@ -11,10 +11,10 @@ const AboutMe = () => {
   return (
     <AboutMeComponent id="about-me">
       <div className="wrapper">
-      <div className="image">
-        <img src={twarz} alt="me" />
-        <Wave />
-      </div>
+        <div className="image">
+          <img src={twarz} alt="me" />
+          <Wave />
+        </div>
         <Line />
         <div className="personal-info">
           <span>
@@ -26,7 +26,6 @@ const AboutMe = () => {
           </span>
         </div>
       </div>
-
 
       <div className="info">
         <div className="education">
@@ -58,16 +57,16 @@ const AboutMeComponent = styled.div`
     padding-top: 3rem;
     flex-direction: column;
     width: 100%;
-    height: 50vh;
+    height: 100%;
   }
-  .wrapper{
+  .wrapper {
     flex: 1;
-    width:100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction:column;
-  .personal-info {
+    flex-direction: column;
+    .personal-info {
       width: 90%;
       @media screen and (max-width: 960px) {
         display: flex;
@@ -119,7 +118,8 @@ const AboutMeComponent = styled.div`
       padding-top: 1rem;
       gap: 1rem;
     }
-    .education, .experience {
+    .education,
+    .experience {
       display: flex;
       flex-direction: column;
       color: white;

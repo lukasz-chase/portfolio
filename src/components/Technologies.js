@@ -20,19 +20,16 @@ const Technologies = () => {
 };
 
 const TechnologiesComponent = styled.div`
-  height: 90vh;
   display: flex;
   justify-content: Center;
   align-items: Center;
   flex-direction: column;
   font-size: 2rem;
+  margin-top: 10rem;
   @media screen and (max-width: 960px) {
+    margin-top: 2rem;
     font-size: 1rem;
-    height: 70vh;
     justify-content: flex-end;
-  }
-  @media screen and (max-height: 700px) {
-    height: 84vh;
   }
   span {
     font-weight: bold;

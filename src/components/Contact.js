@@ -3,40 +3,22 @@ import React from "react";
 import styled from "styled-components";
 //animation
 import { motion } from "framer-motion";
-//icons
-import { AiFillGithub, AiOutlineMail, AiFillLinkedin } from "react-icons/ai";
+//data
+import { contactList } from "../descriptions/contacts";
 
 const Contact = () => {
   return (
     <ContactComponent id="contact">
       <div className="header">Contact</div>
       <div className="contact-info">
-        <div className="contact">
-          <a
-            href="mailto: lukasz.scigaj00@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiOutlineMail className="icon" />
-            <h1>Send me an email: lukasz.scigaj00@gmail.com</h1>
-          </a>
-        </div>
-        <div className="contact">
-          <a href="https://github.com/luki752" target="_blank" rel="noreferrer">
-            <AiFillGithub className="icon" />
-            <h1>Check out my github</h1>
-          </a>
-        </div>
-        <div className="contact">
-          <a
-            href="https://www.linkedin.com/in/lukasz-scigaj/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillLinkedin className="icon" />
-            <h1>Find me on linkedin</h1>
-          </a>
-        </div>
+        {contactList.map((contact) => (
+          <div className="contact">
+            <a href={contact.link} target="_blank" rel="noreferrer">
+              {contact.icon}
+              <h1> {contact.label}</h1>
+            </a>
+          </div>
+        ))}
       </div>
     </ContactComponent>
   );
@@ -57,6 +39,7 @@ const ContactComponent = styled(motion.div)`
   }
   .contact-info {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     @media screen and (max-width: 1000px) {

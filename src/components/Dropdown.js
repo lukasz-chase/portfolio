@@ -2,7 +2,7 @@ import React from "react";
 //styling
 import styled from "styled-components";
 //components
-import { MenuItems } from "./MenuItems";
+import { MenuItems } from "../descriptions/MenuItems";
 //react scroll
 import { Link } from "react-scroll";
 
