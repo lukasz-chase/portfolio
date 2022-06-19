@@ -72,11 +72,12 @@ export const projects = [
   },
   {
     img: amina,
-    info: "(under modernizing)Project that I made to learn TypeScript and zustand. Find a community that you like and join it, like posts that you find interesting and comment them. Create your own posts and communities.",
+    info: "Project that I made to learn TypeScript and zustand. Find a community that you like and join it, like posts that you find interesting and comment them. Create your own posts and communities.",
     id: "amina",
     name: "amina",
     technologies:
       "react, styled-components, TypeScript, zustand and material ui",
+    backend: "node.js, express and mongodb",
     buttons: [
       {
         label: "See it live",
@@ -85,6 +86,10 @@ export const projects = [
       {
         label: "Check the code on github",
         link: "https://github.com/luki752/amina",
+      },
+      {
+        label: "Check backend on github",
+        link: "https://github.com/luki752/amina-server",
       },
     ],
     textOrder: "2",
