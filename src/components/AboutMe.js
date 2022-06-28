@@ -38,7 +38,7 @@ const AboutMe = () => {
         <div className="experience">
           Experience:
           <span>
-            Full-Stack Developer
+            Full-Stack JavaScript Developer
             <p>GOOD 2021.08 - present</p>
           </span>
         </div>

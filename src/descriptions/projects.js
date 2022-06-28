@@ -84,7 +84,7 @@ export const projects = [
         link: "https://amina2.netlify.app/",
       },
       {
-        label: "Check the code on github",
+        label: "Check frontend on github",
         link: "https://github.com/luki752/amina",
       },
       {
