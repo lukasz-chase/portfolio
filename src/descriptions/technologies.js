@@ -6,6 +6,7 @@ import {
   SiRedux,
   SiMaterialUi,
   SiTypescript,
+  SiJest,
 } from "react-icons/si";
 import { DiJavascript1, DiCss3, DiSass, DiNodejsSmall } from "react-icons/di";
 
@@ -59,5 +60,12 @@ export const technologies = [
   },
   {
     label: "Express.js",
+  },
+  {
+    icon: <SiJest className="icon" />,
+    label: "Jest",
+  },
+  {
+    label: "React Testing Library",
   },
 ];
