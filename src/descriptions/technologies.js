@@ -68,4 +68,7 @@ export const technologies = [
   {
     label: "React Testing Library",
   },
+  {
+    label: "Next.js",
+  },
 ];

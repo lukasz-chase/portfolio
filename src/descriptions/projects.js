@@ -50,7 +50,7 @@ export const projects = [
     info: "My biggest project yet. It's a e-commerce shop for clothes with node.js powered backend. If you log in as an admin you can manage store items and users(add, edit and delete).",
     id: "benzen",
     name: "benzen",
-    technologies: "react, styled-components, material ui and redux",
+    technologies: "react, next.js, styled-components, material ui and redux",
     backend: "node.js, express and mongodb",
     buttons: [
       {
