@@ -7,6 +7,7 @@ import {
   SiMaterialUi,
   SiTypescript,
   SiJest,
+  SiTailwindcss,
 } from "react-icons/si";
 import { DiJavascript1, DiCss3, DiSass, DiNodejsSmall } from "react-icons/di";
 
@@ -44,6 +45,10 @@ export const technologies = [
     label: "React",
   },
   {
+    icon: <FaReact className="icon" />,
+    label: "React Native",
+  },
+  {
     icon: <SiRedux className="icon" />,
     label: "Redux",
   },
@@ -70,5 +75,12 @@ export const technologies = [
   },
   {
     label: "Next.js",
+  },
+  {
+    label: "TanStack Query",
+  },
+  {
+    icon: <SiTailwindcss className="icon" />,
+    label: "Tailwind css",
   },
 ];

@@ -55,7 +55,7 @@ export const projects = [
     buttons: [
       {
         label: "See it Live",
-        link: "https://benzen.netlify.app/",
+        link: "https://benzen-nine.vercel.app/",
       },
       {
         label: "Check frontend on github",
@@ -81,7 +81,7 @@ export const projects = [
     buttons: [
       {
         label: "See it live",
-        link: "https://amina2.netlify.app/",
+        link: "https://amina-fnw4.vercel.app/",
       },
       {
         label: "Check frontend on github",
